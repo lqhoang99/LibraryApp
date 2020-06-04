@@ -1,0 +1,20 @@
+extends ../layouts/common.pug
+
+block content
+  h1 Create transaction
+  form(action="/transactions/create", method="POST")
+    lable Select user:
+    select(name="userId" class="form-control")
+      option(value="5ecfb9bedd8bb5905d726ad7") hoang
+      option(value="5ecfb9dadd8bb5905d726ae5") Khanh
+      option(value="5ecfba01dd8bb5905d726b07") hang
+      option(value="5ecfba26dd8bb5905d726b0c") manh2
+    br
+    lable Select book:
+    select(name="bookId" class="form-control")
+      option(value="5ecfba68dd8bb5905d726b32") Tuan Lam Viec 4 Gio
+      option(value="5ecfba75dd8bb5905d726b37") Cố gắng là đạt được
+      option(value="5ecfba7fdd8bb5905d726b3a") Luoc Su Thoi Gian
+      option(value="5ecfba8add8bb5905d726b3d") Vu Tru
+    br
+    button(class="btn btn-primary btn-lg mt-1") Create
